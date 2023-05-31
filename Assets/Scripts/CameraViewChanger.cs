@@ -11,12 +11,13 @@ public class CameraViewChanger : MonoBehaviour
     private TPSCameraController TPSCameraController;
     private FPSCameraController FPSCameraController;
 
-    private float viewCount = 0;
+    private float viewCount;
 
     private void Awake()
     {
         TPSCameraController = GetComponent<TPSCameraController>();
         FPSCameraController = GetComponent<FPSCameraController>();
+        viewCount = 0;
     }
 
     private void LastUpdate()
@@ -43,7 +44,7 @@ public class CameraViewChanger : MonoBehaviour
 
     private void OnViewChange(InputValue value)
     {
-        viewCount++;
+        ++viewCount;
         ViewChange();
     }
 }

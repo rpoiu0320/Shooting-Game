@@ -35,7 +35,7 @@ public class FPSCameraController : MonoBehaviour
     private void Rotate()
     {
         Vector3 lookPoint = Camera.main.transform.position + Camera.main.transform.forward /** lookDistance*/;
-        lookPoint.y = transform.position.y;
+        // lookPoint.y = transform.position.y;
         // transform.LookAt(lookPoint);
     }
 
